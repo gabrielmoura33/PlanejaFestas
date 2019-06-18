@@ -2,40 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/93f4845146.js"></script>
+    <link rel="stylesheet" href="/css/estilo.css">
     <title>Planeja Festas</title>
 
 </head>
 <body>
-    <header>
-            <div class="container">
-                <div class="menu">
-                    <img src="imgs/logo.png" id="logo">
-                    <a href="#">HOME</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Calculadora</a>
-                    <a href="#">Contato</a>
-                </div>
-            </div>
-    </header>
-    <hr>
-    <main>
-         <div class="container">  
-                <br>
-                <img src="http://lorempixel.com/1200/200/food" id="slide">    
-                <br>
-             </div>
-    </main>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="/imgs/logo.png" alt="Planeja Festas" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Calculadora</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Contatos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+      
+<header>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" style="background-image: url('http://lorempixel.com/1920/1080/food')">
+        <div class="carousel-caption d-none d-md-block">
+        <h2 class="display-4">Primeiro Slide</h2>
+        <p class="lead">Legenda.</p>
+        </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('http://lorempixel.com/1920/1080/food')">
+        <div class="carousel-caption d-none d-md-block">
+        <h2 class="display-4">Segundo Slide</h2>
+        <p class="lead">Legenda.</p>
+        </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('http://lorempixel.com/1920/1080/food')">
+        <div class="carousel-caption d-none d-md-block">
+        <h2 class="display-4">Terceiro Slide</h2>
+        <p class="lead">Legenda.</p>
+        </div>
+    </div>
+    </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+</header>
+      
     
-    <footer>
+    <footer align="center">
             <div class="redesSociais">
-                <a href="">Home</a> 
-                <a href="">Sobre</b></a>
-                <a href="">Calculadora</a>
-                <br>
-                <b>©COPYRIGHT: Carolina e Gabriel</b>
+                <small>©Copyright: Carolina e Gabriel</small>
         </div>
     </footer>
 </body>
