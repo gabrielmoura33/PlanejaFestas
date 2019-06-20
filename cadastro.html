@@ -1,51 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/93f4845146.js"></script>
-    <link rel="stylesheet" href="/css/cadastro.css">
-    <title>Planeja Festas</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/93f4845146.js"></script>
+        <link rel="stylesheet" href="/css/cadastro.css">
+        <title>Planeja Festas</title>
 
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                <div class="card card-signup my-5">
-                    <div class="card-body">
-                    <h5 class="card-title text-center">Cadastro</h5>
-                    <form class="form-signup">
-                        <div class="form-label-group">
-                            <input type="text" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
-                            <label for="inputNome">Nome</label>
-                        </div>
-                        <div class="form-label-group">
-                                <input type="date" id="inputNome" class="form-control" placeholder="Data de nascimento" required autofocus>
-                                <label for="inputNome">Data de nascimento</label>
-                            </div>
-                        <div class="form-label-group">
-                            <input type="text" id="inputUsuario" class="form-control" placeholder="Usuário" required autofocus>
-                            <label for="inputUsuario">Usuário</label>
-                        </div>
-      
-                        <div class="form-label-group">
-                        <input type="password" id="inputSenha" class="form-control" placeholder="Senha" required>
-                        <label for="inputSenha">Cadastrar</label>
-                        </div>
-
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase btn-login" type="submit">Entrar</button>
-                        <hr class="my-4">
-                    </form>
-                    <a id="cadastre-se" href="login.html"><p>Já tem uma conta? Login</p></a>
+    </head>
+    <body onload="init();">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img src="/imgs/logo.png" alt="Planeja Festas" id="logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Contatos</a>
+                        </li>
+                    </ul>
+                    </div>
                 </div>
-              </div>
+            </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto menu">
+                    <div class="card card-signup my-5">
+                        <div class="card-body">
+                        <h5 class="card-title text-center">Cadastro</h5>
+                        <form class="form-signup" id="form-cadastro">
+                            <div class="form-label-group">
+                                <input type="text" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+                                <label for="inputNome">Nome</label>
+                            </div>
+                            <div class="form-label-group">
+                                    <input type="date" id="inputDataNascimento" class="form-control" placeholder="Data de nascimento" required autofocus>
+                                    <label for="inputNome">Data de nascimento</label>
+                                </div>
+                            <div class="form-label-group">
+                                <input type="text" id="inputUsuario" class="form-control" placeholder="Usuário" required autofocus>
+                                <label for="inputUsuario">Usuário</label>
+                            </div>
+        
+                            <div class="form-label-group">
+                            <input type="password" id="inputSenha" class="form-control" placeholder="Senha" required>
+                            <label for="inputSenha">Senha</label>
+                            </div>
+
+                            <input class="btn btn-lg btn-primary btn-block text-uppercase btn-login" type="submit" value="Entrar">
+                            <hr class="my-4">
+                        </form>
+                        <a id="cadastre-se" href="login.html"><p>Já tem uma conta? Login</p></a>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
+<script src="js/login.js"></script>
+<script>
+    function init() {
+    $("#form-cadastro").submit(function (e) {
+        if (!$('#form-cadastro')[0].checkValidity()) {
+          alert("Preencha o formulário corretamente.");
+          return;
+         }
+        
+         e.preventDefault();
+
+        // obtem os dados
+        let nome = $('#inputNome').val();
+        let dataNascimento = $('#inputDataNascimento').val();
+        let login = $('#inputUsuario').val();
+        let senha = $('#inputSenha').val();
+
+        let cadastro = cadastraUsuario(nome, dataNascimento, login, senha);
+
+        if (!cadastro)
+            alert("Usuário já cadastrado!");
+        else
+        {
+            alert("Usuário cadastrado com sucesso!");
+            location.href = "login.html";
+        }
+    });
+};
+</script>
+</html>

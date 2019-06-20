@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/93f4845146.js"></script>
+        <link rel="stylesheet" href="/css/estilo.css">
+        <link rel="stylesheet" href="/css/calculadora.css">
+        <title>Planeja Festas</title>
+
+    </head>
+    <body onload="init();">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/imgs/logo.png" alt="Planeja Festas" id="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Minhas festas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calculadora.html">Calculadora</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 mx-auto calculadora">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <form id="form-calculadora">
+                                <div class="row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3"><label for="">Convidados</label><input type="number" id="convidados"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"><label for="">Não tomam álcool</label><input type="number" id="semAlcool"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"><label for="">Comilões</label><input type="number" id="comiloes"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"><label for="">Beberrões</label><input type="number" id="beberroes"></div>
+                                </div>
+                            <div class="row">
+                                <div class="col-sm-10 col-md-6 col-lg-3">
+                                    <h4>Salgados</h4>
+                                </div>
+                                <div class="col-sm-10 col-md-6 col-lg-3">
+                                    <h4>Doces</h4>
+                                </div>
+                                <div class="col-sm-10 col-md-6 col-lg-3">
+                                    <h4>Bebidas sem álcool</h4>
+                                </div>
+                                <div class="col-sm-10 col-md-6 col-lg-3">
+                                    <h4>Bebidas com álcool</h4>
+                                </div>
+                            </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cSalgadinho" value="1">	              
+                                        <label for="cSalgadinho">Salgadinho</label>
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="dAcai" value="1">	              
+                                        <label for="dAcai">Açaí</label>
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="bAgua" value="1">	              
+                                        <label for="bAgua">Água</label>
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="bCerveja" value="1">	              
+                                        <label for="bCerveja">Cerveja</label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cChips" value="1">
+                                        <label for="cChips">Chips</label >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="dPirulito" value="1">
+                                        <label for="dPirulito">Pirulito</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="bRefrigerante" value="1">
+                                        <label for="bRefrigerante">Refrigerante</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aVodka" value="1">
+                                        <label for="aVodka">Vodka</label >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cPizza" value="1">
+                                        <label for="cPizza">Pizza</label >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="dBala" value="1">
+                                        <label for="dBala">Bala</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="bSuco" value="1">
+                                        <label for="bSuco">Suco</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aKislla" value="1">
+                                        <label for="aKislla">Kislla</label    >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cSalaminho" value="1">
+                                        <label for="cSalaminho">Salaminho</label >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="dChiclete" value="1">
+                                        <label for="dChiclete">Chiclete</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                        <div class="col-sm-10 col-md-6 col-lg-3">
+                                            <input type="checkbox" id="aCorotinho" value="1">
+                                            <label for="aCorotinho">Corotinho</label >
+                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cBatataFrita" value="1">
+                                        <label for="cBatataFrita">Batata frita</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="dMarshmallow" value="1">
+                                        <label for="dMarshmallow">Marshmallow</label   >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aCatuaba" value="1">
+                                        <label for="aCatuaba">Catuaba</label   >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cNuggets" value="1">
+                                        <label for="cNuggets">Nuggets</label   >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="dMeMs" value="1">
+                                        <label for="dMeMs">M&Ms</label  >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aIce" value="1">
+                                        <label for="aIce">Ice</label   >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cMandiocaFrita" value="1">
+                                        <label for="cMandiocaFrita">Mandioca frita</label    >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aWhiskey" value="1">
+                                        <label for="aWhiskey">Whiskey</label   >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="cIscaDeCarne" value="1">
+                                        <label for="cIscaDeCarne">Isca de carne</label >
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aTequila" value="1">
+                                        <label>Tequila</label   >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aVinho" value="1">
+                                        <label >Vinho</label >
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3"></div>
+                                    <div class="col-sm-10 col-md-6 col-lg-3">
+                                        <input type="checkbox" id="aCachaca" value="1">
+                                        <label for="aCachaca">Cachaça</label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <input type="button" class="btn btn-success" id="btnCalculadora" value="Calcular">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer align="center">
+            <div class="redesSociais">
+                <small>©Copyright: Carolina e Gabriel</small>
+            </div>
+        </footer>
+    </body>
+    <script src="js/calculadora.js"></script>
+    <script>
+        function init() {
+            $("#btnCalculadora").click(function () {
+                let convidados = $('#convidados').val();
+                let semAlcool = $('#semAlcool').val();
+                let comiloes = $('#comiloes').val();
+                let beberroes = $('#beberroes').val();
+                let listaCheckbox = document.getElementsByTagName("INPUT");
+                let arrCardapio = [];
+                let marcado = false;
+                
+                if (beberroes == "")
+                    beberroes = 0;
+                if (semAlcool == "")
+                    semAlcool = 0;
+                if (comiloes == "")
+                    comiloes = 0;
+                if (convidados == "")
+                    convidados = 0;
+
+                beberroes = parseInt(beberroes);
+                comiloes = parseInt(comiloes);
+                semAlcool = parseInt(semAlcool);
+                convidados = parseInt(convidados);
+
+                if (convidados <= 0) {
+                    alert("Você precisa de ao menos um convidado!");
+                }
+                else {
+                    if (semAlcool < 0 || comiloes < 0 || beberroes < 0) {
+                        alert ("Números inválidos!");
+                    } else{
+                        if ((semAlcool > convidados || beberroes > convidados || comiloes > convidados)) {
+                            alert("O número de convidados é o total, incluindo os que não bebem álcool, comilões e beberrões!");
+                        } else {
+                            if (semAlcool + beberroes > convidados) {
+                                alert("O número de pessoas que não bebem álcool e de beberrões não pode ultrapassar o número de convidados");
+                            }   
+                             else {
+                        
+                                for (loop = 0; loop < listaCheckbox.length; loop++) {
+                                    let item = listaCheckbox[loop];
+                                    if (item.type == "checkbox" && item.checked) {
+                                        marcado = true;
+                                        itemLabel = $("label[for='"+item.id+"']").text(); 
+                                        ingrediente = {
+                                            "id": item.id,
+                                            "qtde_porcao": item.value,
+                                            "nome": itemLabel,
+                                            "quantidadeTotal": 0,
+                                            "unidade": ""
+                                        };
+
+                                        arrCardapio.push(ingrediente);
+                                    }
+                                }
+
+                                if (marcado) {
+                                    let Festa = {
+                                    "convidados": convidados,
+                                    "semAlcool": semAlcool,
+                                    "comiloes": comiloes,
+                                    "beberroes": beberroes,
+                                    "ingredientes": arrCardapio
+                                    };
+
+                                    calculaFesta(Festa);
+                                    location.href = "resultado.html";
+                                } else {
+                                    alert("Você precisa selecionar um item do cardápio!")
+                                }
+                                
+                            }
+
+                        }
+                        }
+                    }
+                
+            });
+        }
+    </script>
+</html>

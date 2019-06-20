@@ -1,72 +1,37 @@
-* {margin: 0; padding: 0;
-font-family: sans-serif;
-}
-body{
-    background-color: #fffef7;
+* {
+    margin: 0; padding: 0;
+    font-family: sans-serif;
 }
 
-header{
-    height: 60px;
-    padding: 10px; 
+body {
+    background-color: #fffef7 !important;
 }
-#logo{
+#menu {
+    border: none !important;
+}
+a {
+    color: black !important;
+}
+#logo {
     width: 40px;
     height: 40px;
 }
 
-.link header{
-    margin-left: 100px;
-}
-.menu{
-    padding-top: 0;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.menu a{
-    padding: 25px 25px;
-}
-.menu a:hover{
-    color: blanchedalmond;
-    background-color: #c10424;
-}
-#logo{
-    float: left;   
-    height: 3%;
-    width: 3%;
-}
-main{
-    font-family: 'Oswald', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
-}
-#slide{
-    display: inline;
-    padding-top: 1%;
-   margin-left: 5%;
+#menu a:hover{
+    color: #ec4b66 !important;
+    /* background-color: #ec4b66; */
 }
 
-footer{height: 50px;
-     padding: 10px 0; 
-     background-color: #c10424;
-     position:absolute;
-     bottom:0;
-     width:100%;
-    }
-.container{
-    margin: 0 auto; width: 1400px;
-}
-.redesSociais{
-    font-family: 'Oswald', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
-    color: black;
-    text-align: center;  
-}
-.link{
-    text-align: center;
-    margin-left: 10px;
-}
-a{  
-    text-decoration: none;
-    display: inline;
-}
-a:hover{
-    color: green;
+li {
+    padding-left: 2em;
 }
 
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
