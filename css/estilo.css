@@ -35,3 +35,37 @@ li {
     -o-background-size: cover;
     background-size: cover;
   }
+
+.about-us-box {
+    margin-top: 100px;
+    height: 100vh;
+    min-height: 350px;
+}
+ 
+.about-us-box-text {
+    padding-right: 30px;
+    text-align: left;
+}
+ 
+.about-us-box-text h3 {
+    margin-top: 0;
+}
+ 
+.about-us-box-text .medium-paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.equipe {
+    margin-top: 40px;
+}
+ 
+
+.card-img-top {
+    width: 500px;
+    height: 350px;
+}
