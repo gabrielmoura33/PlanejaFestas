@@ -7,6 +7,7 @@ function calculaFesta (Festa) {
     let beberroes = Festa.beberroes;
     let semAlcool = Festa.semAlcool;
     let convidados = Festa.convidados;
+    let arredondado;
 
     for (i=0; i<Festa.ingredientes.length; i++)
     {
@@ -28,6 +29,7 @@ function calculaFesta (Festa) {
             Festa.ingredientes[i].quantidadeTotal = ((convidados-semAlcool-beberroes)*porcao)+(beberroes*porcao*1.5);
             Festa.ingredientes[i].unidade = "L";
         }
+        Festa.ingredientes[i].quantidadeTotal = parseFloat(Festa.ingredientes[i].quantidadeTotal.toFixed(1));
     }
 
     let index = login.data.map(obj => obj.id).indexOf(usuarioAtual.id);

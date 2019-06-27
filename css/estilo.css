@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #fffef7 !important;
+    background: #FFFFFF;
 }
 #menu {
     border: none !important;
@@ -54,6 +54,7 @@ li {
 .about-us-box-text .medium-paragraph {
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 h3 {
@@ -66,6 +67,8 @@ h3 {
  
 
 .card-img-top {
-    width: 500px;
+    width: 350px;
     height: 350px;
+    border-radius: 50%;
+    margin: 0 auto;
 }
