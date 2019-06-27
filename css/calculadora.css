@@ -18,3 +18,21 @@ h2{
 table {
     text-align: center;
 }
+
+input[type=text] {   
+    width: 250px;
+    text-align: center;
+}
+
+input[type=number] {   
+    width: 90px;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.btn {
+    text-align: center !important;
+}

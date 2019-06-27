@@ -87,7 +87,6 @@ function deletePostagem(id) {
 }
 
 function exibePostagens() {
-    // Remove todas as linhas do corpo do body
     $("#lista-postagens").html("");
 
     // Popula o body com os registros do banco de dados
@@ -95,33 +94,40 @@ function exibePostagens() {
         let postagem = dbPosts.data[i];
         $("#lista-postagens").append(`
         <div class="panel panel-default"> 
-        <div class="panel-heading">   
+          <div class="panel-heading">   
         <h3>${postagem.titulo}</h3> </div>
-        <div class="panel-body"> <p>Data: ${postagem.data}</p><p>${postagem.texto}</p>
-    </div>
+        <div class="panel-body"> <p>Data: ${postagem.data}</p><p>${postagem.texto}</p></div>
+      </div>
         <h3>Comentários</h3><br>`);
         for (j = 0; j < dbPosts.data[i].comentarios.length; j++)
         {
-        let comentario = dbPosts.data[i].comentarios[j];
-        $("#lista-postagens").append (`
+          let comentario = dbPosts.data[i].comentarios[j];
+          $("#lista-postagens").append (`
             <div class="panel panel-default">
-            <div class="panel-heading"><h4><strong>${comentario.nome}</strong></h4></div>
-            <div class="panel-body"><p>${comentario.texto}</p></div>`);
+              <div class="panel-heading"><h4><strong>${comentario.nome}</strong></h4></div>
+              <div class="panel-body"><p>${comentario.texto}</p></div>`);
         }
         $("#lista-postagens").append(`<div class="panel panel-default">
                 <form id=form-comentarios">
-                <div class="panel-body">
+                  <div class="panel-heading">
+                      <div class="form-group">
+                        <label for="inputNome">Nome (*)</label>
+                        <input type="text" class="form-control" id="inputNome${postagem.id}" placeholder="Nome">
+                      </div>
+                  </div>
+                  <div class="panel-body">
                     <div class="form-group">
-                    <label for="inputComentario">Comentário (*)</label>
-                    <textarea cols="100" rows="10" type="text" class="form-control" id="inputComentario${postagem.id}" required placeholder="Insira o seu comentário"></textarea>
+                      <label for="inputComentario">Comentário (*)</label>
+                      <textarea cols="100" rows="10" type="text" class="form-control" id="inputComentario${postagem.id}" required placeholder="Insira o seu comentário"></textarea>
                     </div>
                     <div class="form-group">
-                    <input type="button" class="btn btn-success" id="btnAdicionarComentario" value="Inserir Comentário" onclick="insereComentario(${postagem.id})">
+                      <input type="button" class="btn btn-success" id="btnAdicionarComentario" value="Inserir Comentário" onclick="insereComentario(${postagem.id})">
                     </div>
-                </div>
+                  </div>
                 </form>
-            </div><br><br>`);
+              </div><br><br>`);
     }
+
 }
 
 function insereComentario (id) {
